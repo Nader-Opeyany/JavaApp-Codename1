@@ -57,6 +57,7 @@ public class AppMain {
             return;
         }
         Form clockForm = new Form("Digital Clock");
+        clockStyle.setAlignment(Component.CENTER);//possibly delete
         //Style titleBarColor = clockForm.getToolbar().getTitleComponent().getAllStyles();//META makes this colored
        //titleBarColor.setBgColor(ColorUtil.YELLOW);
         Style clockStyle = new Style();//calling style
