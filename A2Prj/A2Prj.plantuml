@@ -1,0 +1,224 @@
+@startuml
+
+title __A2PRJ's Class Diagram__\n
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.AccelerateCommand {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.ActionButtons {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.AppMain {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.Bird {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.CommandClass {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.DeccelerateCommand {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    abstract class org.csc133.a2.Fixed {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.Game {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    abstract class org.csc133.a2.GameObject {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.GameWorld {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.GlassCockpit {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.Helicopter {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    interface org.csc133.a2.ISteerable {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.LeftTurn {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.MapView {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    abstract class org.csc133.a2.Movable {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.NonPlayerHelicopter {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.RefuelingBlimps {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.RightTurn {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    class org.csc133.a2.Skyscraper {
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    namespace clocks {
+      class org.csc133.a2.clocks.DamageClock {
+      }
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    namespace clocks {
+      class org.csc133.a2.clocks.FuelClock {
+      }
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    namespace clocks {
+      class org.csc133.a2.clocks.GameTimeClock {
+      }
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    namespace clocks {
+      class org.csc133.a2.clocks.HeadingClock {
+      }
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    namespace clocks {
+      class org.csc133.a2.clocks.LastSkyScrapperClock {
+      }
+    }
+  }
+  
+
+  namespace org.csc133.a2 {
+    namespace clocks {
+      class org.csc133.a2.clocks.LivesClock {
+      }
+    }
+  }
+  
+
+  org.csc133.a2.AccelerateCommand -up-|> com.codename1.ui.Command
+  org.csc133.a2.AccelerateCommand o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.ActionButtons -up-|> com.codename1.ui.Container
+  org.csc133.a2.ActionButtons o-- org.csc133.a2.AccelerateCommand : a
+  org.csc133.a2.ActionButtons o-- org.csc133.a2.DeccelerateCommand : b
+  org.csc133.a2.ActionButtons o-- org.csc133.a2.LeftTurn : l
+  org.csc133.a2.ActionButtons o-- org.csc133.a2.RightTurn : r
+  org.csc133.a2.Bird -up-|> org.csc133.a2.Movable
+  org.csc133.a2.CommandClass -up-|> com.codename1.ui.Command
+  org.csc133.a2.CommandClass o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.DeccelerateCommand -up-|> com.codename1.ui.Command
+  org.csc133.a2.DeccelerateCommand o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.Fixed -up-|> org.csc133.a2.GameObject
+  org.csc133.a2.Game -up-|> com.codename1.ui.Form
+  org.csc133.a2.Game o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.GlassCockpit -up-|> com.codename1.ui.Container
+  org.csc133.a2.GlassCockpit o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.Helicopter .up.|> org.csc133.a2.ISteerable
+  org.csc133.a2.Helicopter -up-|> org.csc133.a2.Movable
+  org.csc133.a2.LeftTurn -up-|> com.codename1.ui.Command
+  org.csc133.a2.LeftTurn o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.MapView -up-|> com.codename1.ui.Component
+  org.csc133.a2.MapView o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.Movable -up-|> org.csc133.a2.GameObject
+  org.csc133.a2.NonPlayerHelicopter .up.|> org.csc133.a2.ISteerable
+  org.csc133.a2.NonPlayerHelicopter -up-|> org.csc133.a2.Movable
+  org.csc133.a2.RefuelingBlimps -up-|> org.csc133.a2.Movable
+  org.csc133.a2.RightTurn -up-|> com.codename1.ui.Command
+  org.csc133.a2.RightTurn o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.Skyscraper -up-|> org.csc133.a2.Fixed
+  org.csc133.a2.clocks.DamageClock -up-|> com.codename1.ui.Component
+  org.csc133.a2.clocks.DamageClock o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.clocks.FuelClock -up-|> com.codename1.ui.Component
+  org.csc133.a2.clocks.FuelClock o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.clocks.GameTimeClock -up-|> com.codename1.ui.Component
+  org.csc133.a2.clocks.GameTimeClock o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.clocks.HeadingClock -up-|> com.codename1.ui.Component
+  org.csc133.a2.clocks.HeadingClock o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.clocks.LastSkyScrapperClock -up-|> com.codename1.ui.Component
+  org.csc133.a2.clocks.LastSkyScrapperClock o-- org.csc133.a2.GameWorld : gw
+  org.csc133.a2.clocks.LivesClock -up-|> com.codename1.ui.Component
+  org.csc133.a2.clocks.LivesClock o-- org.csc133.a2.GameWorld : gw
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
